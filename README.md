@@ -25,6 +25,13 @@ curl -H "User-Agent: MyCustomUserAgent" -H "myjwt: eyJhbGciOiJIUzI1NiIsInR5cCI6I
 * 8) Create a PingAccess Site to point to the new node.js server
 * 9) Create an application in PingAccess using an existing WebSession from your OIDC Provider
  
+
+* 10) Create a PingAccess Identity Mapping to pass the WebSession data to the application and assign it to the Application
+* 11) Execute a test request to PingAccess, the OIDC Provider (like PingFederate) will challenge and on success send the token to PingAccess, then the Identity Mappings will be fullfilled and appear in the application page.
+
+
+* Node Examples: https://github.com/nodejs/examples
+
 * /***
  *
  * The sample code described herein is provided on an "as is" basis, without warranty of any kind, to the
@@ -41,8 +48,3 @@ curl -H "User-Agent: MyCustomUserAgent" -H "myjwt: eyJhbGciOiJIUzI1NiIsInR5cCI6I
  *
  * This sample code is not covered by any Service Level Agreements.
  */
-* 10) Create a PingAccess Identity Mapping to pass the WebSession data to the application and assign it to the Application
-* 11) Execute a test request to PingAccess, the OIDC Provider (like PingFederate) will challenge and on success send the token to PingAccess, then the Identity Mappings will be fullfilled and appear in the application page.
-
-
-* Node Examples: https://github.com/nodejs/examples
